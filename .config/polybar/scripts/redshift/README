@@ -1,0 +1,8 @@
+[module/redshift-control]
+type = custom/script 
+label = " %output%"
+tail = true
+format = <label>
+interval = 1
+exec = ~/scripts/polybar/redshift-control/rS-control.sh 
+click-left = ~/scripts/polybar/redshift-control/rS-control.sh --toggle

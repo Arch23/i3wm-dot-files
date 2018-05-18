@@ -1,0 +1,139 @@
+* {
+    //Font color
+    red-text:                    rgba(244, 73, 59, 100%);
+    faint-red:                   rgba(246, 109, 98, 100%);
+    my-blue:                     rgba ( 66, 109, 141, 100 % );
+    transparent:                 rgba(0,0,0,0%);
+    selected-normal-foreground:  @red-text;
+    foreground:                  rgba ( 66, 109, 141, 100 % );
+    normal-foreground:           @foreground;
+    selected-urgent-foreground:  rgba ( 249, 249, 249, 100 % );
+    urgent-foreground:           rgba ( 204, 102, 102, 100 % );
+    active-foreground:           rgba ( 101, 172, 255, 100 % );
+    selected-active-foreground:  rgba ( 249, 249, 249, 100 % );
+    alternate-normal-foreground: @foreground;
+    alternate-urgent-foreground: @urgent-foreground;
+    alternate-active-foreground: @active-foreground;
+    lightfg:                     rgba ( 88, 104, 117, 100 % );
+    
+    red:                         rgba(255, 0, 0, 100%);
+    blue:                        rgba ( 38, 139, 210, 100 % );
+    alternate-urgent-background: rgba ( 75, 81, 96, 90 % );
+    lightbg:                     rgba ( 238, 232, 213, 100 % );
+    alternate-active-background: rgba ( 75, 81, 96, 89 % );
+
+    background:                  rgba ( 0, 0, 0, 73 % );
+    selected-normal-background:  @transparent;
+    border-color:                @red-text;
+    spacing:                     2;
+    separatorcolor:              @red-text;
+    urgent-background:           rgba ( 29, 31, 33, 17 % );
+    selected-urgent-background:  rgba ( 165, 66, 66, 100 % );
+    background-color:            @transparent;
+    normal-background:           @transparent;
+    alternate-normal-background: @transparent;
+
+    active-background:           rgba ( 29, 31, 33, 17 % );
+    selected-active-background:  @my-blue;
+}
+#window {
+    background-color: @background;
+    border:           0;
+    padding:          200;
+}
+#mainbox {
+    border:  0;
+    padding: 0;
+}
+#message {
+    border-color: @separatorcolor;
+    border:       2px 0px 0px ;
+    padding:      1px ;
+}
+#textbox {
+    text-color: @foreground;
+}
+#listview {
+    border-color: @separatorcolor;
+    fixed-height: 0;
+    border:       2px 0px 0px ;
+    spacing:      2px ;
+    scrollbar:    false;
+    padding:      2px 0px 0px ;
+}
+#element {
+    border:  0;
+    padding: 1px ;
+}
+#element.normal.normal {
+    background-color: @normal-background;
+    text-color:       @normal-foreground;
+}
+#element.normal.urgent {
+    background-color: @urgent-background;
+    text-color:       @urgent-foreground;
+}
+#element.normal.active {
+    background-color: @active-background;
+    text-color:       @active-foreground;
+}
+#element.selected.normal {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+#element.selected.urgent {
+    background-color: @selected-urgent-background;
+    text-color:       @selected-urgent-foreground;
+}
+#element.selected.active {
+    background-color: @selected-active-background;
+    text-color:       @selected-active-foreground;
+}
+#element.alternate.normal {
+    background-color: @alternate-normal-background;
+    text-color:       @alternate-normal-foreground;
+}
+#element.alternate.urgent {
+    background-color: @alternate-urgent-background;
+    text-color:       @alternate-urgent-foreground;
+}
+#element.alternate.active {
+    background-color: @alternate-active-background;
+    text-color:       @alternate-active-foreground;
+}
+#sidebar {
+    border-color: @separatorcolor;
+    border:       2px 0px 0px ;
+}
+#button {
+    text-color: @normal-foreground;
+    spacing:    0;
+}
+#button.selected {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+#inputbar {
+    text-color: @normal-foreground;
+    spacing:    0;
+    padding:    1px;
+    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+}
+#case-indicator {
+    text-color: @red-text;
+    spacing:    0;
+}
+#entry {
+    text-color: @red-text;
+    spacing:    0;
+}
+#prompt {
+    text-color: @red-text;
+    spacing:    0;
+}
+#textbox-prompt-colon {
+    text-color: @red-text;
+    expand:     false;
+    str:        ":";
+    margin:     0px 0.3em 0em 0em ;
+}

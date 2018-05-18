@@ -1,0 +1,14 @@
+configuration {
+	columns: 1;
+	font: "Fira Mono 12";
+	bw: 0;
+	location: 0;
+	show-icons: false;
+	terminal: "konsole";
+	eh: 1;
+	line-margin: 0;
+	line-padding: 5;
+	hide-scrollbar: true;
+	fullscreen: true;
+	theme: "arch-theme";
+}
